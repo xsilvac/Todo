@@ -6,16 +6,24 @@ import { useNavigate, Link } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emptyEmail, setEmptyEmail] = useState(false);
+  const [emptyPassword, setEmptyPassword] = useState(false);
 
   const navigate = useNavigate();
   const functionAutentication = () => {
-    if (email.length < 1) {
-      alert("falta email");
-    } else if (password.length < 1) {
-      alert("falta password");
+    if (email.length < 1 && password.length < 1) {
+      setEmptyEmail(true);
+      setEmptyPassword(true);
+    } else if (email.length === 0) {
+      setEmptyEmail(true);
+    } else if (password.length === 0) {
+      setEmptyPassword(true);
+    } else {
+      navigate("/list");
+      setEmptyEmail(false);
+      setEmptyPassword(false);
+      console.log(email, password);
     }
-    navigate("/list");
-    console.log(email, password);
   };
   return (
     <>
@@ -26,6 +34,7 @@ const Login = () => {
           <ContainerInputs>
             <RiMailLine />
             <Input
+              hasError={emptyEmail ? "hasError" : false}
               type="email"
               placeholder="Ingrese su email"
               onChange={(e) => {
@@ -36,6 +45,7 @@ const Login = () => {
           <ContainerInputs>
             <RiLockPasswordLine />
             <Input
+              hasError={emptyPassword ? "hasError" : false}
               type="password"
               placeholder="Ingrese su contraseña"
               onChange={(e) => {
