@@ -20,7 +20,7 @@ align-items: center;
 }
 >div.containerLogin{
     background-color: black;
-    width: 35%;
+    width: 30%;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@ align-items: center;
     opacity: 75%;
     border-radius: 5%;
     border: 1px solid;
-    box-shadow: 5px 5px 18px white;
+    box-shadow: 5px 5px 30px white;
 }
 >div.containerLogin >h1{
     color:white;
@@ -50,15 +50,15 @@ text-align: center;
     color: black;
     position: absolute;
     display: block;
-    margin: 3% 0 0 17%;
+    margin: 3% 0 0 15%;
 }`
 
 export const Input = styled.input`
-border: none;
-width: 70%;
+border: ${({hasError}) => hasError ? "3px solid red" : "none"};
+width: 80%;
 background-color: white;
 border-radius: 15px;
-padding: 4% 4% 4% 10%;
+padding: 4% 4% 4% 15%;
 font-size: 115%;
 color: black;
 &::placeholder{

@@ -7,3 +7,4 @@ export const CreateStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Zilla Slab', Medium 500 Italic;
 }`
+

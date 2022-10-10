@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../navbar";
 
 const TodoList = () => {
-  return <div>TodoList</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
 export default TodoList;
