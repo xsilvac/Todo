@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RiLockPasswordLine, RiMailLine } from "react-icons/ri";
-import { Container, Input, Button, ContainerInputs } from "./styles";
+import { Container, Input, Button, ContainerInputs, Spam } from "./styles";
 import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
@@ -41,6 +41,8 @@ const Login = () => {
                 setEmail(e.target.value);
               }}
             />
+            <br />
+            {emptyEmail ? <Spam>Campo inválido</Spam> : "none"}
           </ContainerInputs>
           <ContainerInputs>
             <RiLockPasswordLine />
@@ -52,6 +54,8 @@ const Login = () => {
                 setPassword(e.target.value);
               }}
             />
+            <br />
+            {emptyPassword ? <Spam>Campo inválido</Spam> : "none"}
           </ContainerInputs>
           <Button type="button" onClick={functionAutentication}>
             Ingresar

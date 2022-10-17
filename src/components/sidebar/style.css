@@ -1,0 +1,13 @@
+.hiddenSidebar{
+    width: 65px;
+    height: 100vh;
+    background:blue;
+    transition: 200ms;
+
+}
+.showSidebar{
+    width: 240px;
+    height: 100vh;
+    background:red;
+    transition: 200ms;
+}

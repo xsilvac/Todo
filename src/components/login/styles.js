@@ -66,7 +66,7 @@ color: black;
 }`
 
 export const Button = styled.button`
-width: 70%;
+width: 80%;
 padding: 2%;
 font-size: 150%;
 border-radius: 15px;
@@ -74,9 +74,13 @@ border: none;
 font-weight: bolder;
 background-color: #8d5c9b;
 border: 6px solid #8d5c9b;
+cursor:pointer;
 &:hover{
     background-color: #dd4b7d;
     transition: all 0.3s ease;
     border: 6px solid #8d5c9b;
 }
+`
+export const Spam = styled.p`
+color:red;
 `
