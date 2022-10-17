@@ -1,10 +1,11 @@
 import React from "react";
-import Navbar from "../navbar";
+import Sidebar from "../sidebar/Sidebar";
 
 const TodoList = () => {
   return (
-    <div>
-      <Navbar />
+    <div style={{ display: "flex" }}>
+      <Sidebar />
+      <div>holaaa</div>
     </div>
   );
 };
